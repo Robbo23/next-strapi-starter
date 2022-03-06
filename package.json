@@ -1,0 +1,20 @@
+{
+  "name": "strapi-test-testu",
+  "version": "1.0.0",
+  "workspaces": [
+    "next-app",
+    "strapi-cms"
+  ],
+  "scripts": {
+    "dev": "concurrently \"cd strapi-cms && npm run develop\" \"cd next-app && npm run dev\"",
+    "build": "concurrently \"cd strapi-cms && npm run build\" \"cd next-app && npm run build\"",
+    "start": "concurrently \"cd strapi-cms && npm run start\" \"cd next-app && npm run start\""
+  },
+  "dependencies": {
+    "concurrently": "^7.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1"
+  },
+  "license": "MIT"
+}
